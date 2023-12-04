@@ -20,10 +20,12 @@ export const AUTHOR_ID_TO_DETAILS_MAP: Record<
 > = {
   1: {
     name: "Marla Peterson",
+    // replace with your author portrait public id
     publicId: "demo blog cover images/author-avatar-1",
   },
   2: {
     name: "David Nix",
+    // replace with your author portrait public id
     publicId: "demo blog cover images/author-avatar-2",
   },
 };
