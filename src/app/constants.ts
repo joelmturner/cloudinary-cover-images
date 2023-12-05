@@ -29,3 +29,5 @@ export const AUTHOR_ID_TO_DETAILS_MAP: Record<
     publicId: "demo blog cover images/author-avatar-2",
   },
 };
+
+export const BACKGROUND_PUBLIC_ID = "demo blog cover images/cover-image-bg"

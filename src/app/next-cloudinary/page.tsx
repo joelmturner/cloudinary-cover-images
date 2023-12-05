@@ -4,7 +4,11 @@ import { CldImage } from "next-cloudinary";
 import { darken, lighten } from "polished";
 import { allPosts, Post } from "contentlayer/generated";
 import { compareDesc, format, parseISO } from "date-fns";
-import { AUTHOR_ID_TO_DETAILS_MAP, CATEGORY_COLOR_MAP } from "../constants";
+import {
+  AUTHOR_ID_TO_DETAILS_MAP,
+  BACKGROUND_PUBLIC_ID,
+  CATEGORY_COLOR_MAP,
+} from "../constants";
 
 function PostCard({
   title,
@@ -51,42 +55,42 @@ function PostCard({
         />
       ) : (
         <CldImage
-          width="800"
-          height="400"
+          width="2048"
+          height="1024"
           overlays={[
             {
               // avatar
               publicId,
               position: {
                 gravity: "west",
-                x: 40,
+                x: 102,
                 y: 0,
               },
               effects: [
-                { width: 250, height: 250, crop: "fit", radius: "max" },
+                { width: 640, height: 640, crop: "fit", radius: "max" },
               ],
             },
             {
               // author name
               text: {
                 text: name,
-                fontSize: 24,
+                fontSize: 62,
                 color: `#${titleColor}`,
                 fontFamily: "Arial",
                 textAlign: "center",
               },
               position: {
                 gravity: "center",
-                x: -235,
-                y: 150,
+                x: -601,
+                y: 384,
               },
-              effects: [{ width: 250, height: 200, crop: "fit" }],
+              effects: [{ width: 1152, height: 896, crop: "fit" }],
             },
             {
               // category symbol
               text: {
                 text: categorySymbol,
-                fontSize: 60,
+                fontSize: 154,
                 color: `#${symbolColor}`,
                 fontFamily: "Arial",
                 fontWeight: "bold",
@@ -94,13 +98,13 @@ function PostCard({
               },
               position: {
                 gravity: "north_west",
-                x: 55,
-                y: 55,
+                x: 140,
+                y: 140,
               },
               effects: [
                 {
-                  width: 75,
-                  height: 75,
+                  width: 192,
+                  height: 192,
                   crop: "scale",
                   background: `rgb:${categoryColor}`,
                   radius: "max",
@@ -111,22 +115,22 @@ function PostCard({
               // title
               text: {
                 text: title,
-                fontSize: 64,
+                fontSize: 164,
                 color: `#${titleColor}`,
                 fontFamily: "Arial",
               },
               position: {
                 gravity: "west",
-                x: 325,
+                x: 832,
                 y: 0,
               },
-              effects: [{ width: 450, height: 350, crop: "fit" }],
+              effects: [{ width: 1152, height: 896, crop: "fit" }],
             },
           ]}
           alt="Description of my image"
           sizes="100vw"
           // background image and color styles
-          src="demo blog cover images/cover-image-bg"
+          src={BACKGROUND_PUBLIC_ID}
           effects={[
             {
               colorize: 20,
