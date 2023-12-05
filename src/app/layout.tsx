@@ -20,18 +20,24 @@ export default function RootLayout({
       <body className={inter.className}>
         <div className="flex flex-col gap-4 py-6">
           <div className="flex justify-between items-center p-4 w-full max-w-4xl mx-auto">
-            <h1 className="text-2xl font-black text-center">
+            <h1 className="text-xl font-black text-center w-full">
               Cloudinary Blog Cover Images
             </h1>
-            <div className="flex gap-4 max-w-xs">
+            <div className="flex gap-4 w-full">
               <Link href="/" className="text-sky-400 max-w-2xl mx-auto">
-                Home
+                next image
               </Link>
               <Link
                 href="/next-cloudinary"
                 className="text-sky-400 max-w-2xl mx-auto"
               >
-                With next-cloudinary
+                next-cloudinary
+              </Link>
+              <Link
+                href="/getCldImage"
+                className="text-sky-400 max-w-2xl mx-auto"
+              >
+                getCldImage
               </Link>
             </div>
           </div>

@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
-import { generateCloudinaryUrl } from "./helpers";
+import { generateCldImageOptions } from "../helpers";
 import { allPosts, Post } from "contentlayer/generated";
 import { compareDesc, format, parseISO } from "date-fns";
+import { getCldImageUrl } from "next-cloudinary";
 
 function PostCard({
   title,
@@ -13,11 +14,12 @@ function PostCard({
   coverImage,
   body,
 }: Post) {
-  // using a manually generated Cloudinary URL
-  // gives us more control over the image
-  // but can be more brittle
+  // using next-cloudinary to generate the image URL
+  // this can also be used for the OG image
+  // see src/app/posts/[slug]/page.tsx generateMetadata()
   const resolvedImage =
-    coverImage ?? generateCloudinaryUrl({ title, category, author });
+    coverImage ??
+    getCldImageUrl(generateCldImageOptions({ title, category, author }));
 
   return (
     <div className="mb-8">
@@ -38,8 +40,8 @@ function PostCard({
           src={resolvedImage}
           className="mb-2"
           alt={title}
-          width={600}
-          height={200}
+          width={800}
+          height={400}
         />
       ) : null}
 

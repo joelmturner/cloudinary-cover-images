@@ -5,11 +5,11 @@ export const CATEGORY_COLOR_MAP: Record<
 > = {
   dev: {
     color: "ff9900",
-    symbol: encodeURIComponent(` < > `),
+    symbol: ` < > `,
   },
   life: {
     color: "f463f4",
-    symbol: encodeURIComponent(` ~ `),
+    symbol: ` ~ `,
   },
 };
 

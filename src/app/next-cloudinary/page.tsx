@@ -30,6 +30,13 @@ function PostCard({
   // get the name and public ID for the author
   const { name, publicId } = AUTHOR_ID_TO_DETAILS_MAP[author];
 
+  // author public id isn't encoding correctly when passed to CldImage
+  //   const resolvedImage =
+  //     coverImage ??
+  //     getCldImageUrl(generateCldImageOptions({ title, category, author }));
+
+  const altText = `${title} - ${name}`;
+
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">
@@ -49,8 +56,9 @@ function PostCard({
           width="800"
           height="400"
           src={coverImage}
-          alt="Description of my image"
+          alt={altText}
           sizes="100vw"
+          // this keeps all of our effects
           preserveTransformations={true}
         />
       ) : (
@@ -127,7 +135,7 @@ function PostCard({
               effects: [{ width: 1152, height: 896, crop: "fit" }],
             },
           ]}
-          alt="Description of my image"
+          alt={altText}
           sizes="100vw"
           // background image and color styles
           src={BACKGROUND_PUBLIC_ID}
