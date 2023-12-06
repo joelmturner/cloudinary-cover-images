@@ -24,7 +24,7 @@ function PostCard({
       <h2 className="mb-1 text-xl">
         <Link
           href={url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
+          className="text-orange-200 hover:text-orange-400 dark:text-orange-200"
         >
           {title}
         </Link>
@@ -59,6 +59,12 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-xl py-8">
       <h1 className="mb-8 text-center text-2xl font-black">Using Next Image</h1>
+      <p className="prose bg-gray-700 p-4 mb-4">
+        The post images below are using a manually generated Cloudinary URL. The
+        URL is then passed to Next&apos;s image component. This gives us more
+        control over the image but can be more brittle if we get something wrong
+        in our template.
+      </p>
       {posts.map((post) => (
         <PostCard key={post.url} {...post} />
       ))}

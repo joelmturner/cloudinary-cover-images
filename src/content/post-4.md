@@ -5,4 +5,4 @@ category: life
 author: 2
 ---
 
-Some more stuff here that might be interesting to some.
+This post has a category of `life` but no coverImage specified. The image here will be generated based on the title, category, and author.

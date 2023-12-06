@@ -1,9 +1,9 @@
 ---
-title: My Third Blog Post
+title: Curated Cover Image
 date: 2023-11-09
-coverImage: 'https://res.cloudinary.com/joelmturner/image/upload/c_limit,w_400/f_auto/q_auto/v1634825623/illustration/1634012144000_18247157836067671?_a=BAVALBAO0'
+coverImage: 'https://res.cloudinary.com/joelmturner/image/upload/v1701844782/demo%20blog%20cover%20images/stair-post.jpg'
 category: dev
 author: 1
 ---
 
-I'm really excited to start this journey of blogging. I'll be sharing my thoughts on various topics, mainly related to software development.
+This post has a category of `dev` and a coverImage specified. The image here will be is the coverImage.

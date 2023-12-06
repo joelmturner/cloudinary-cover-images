@@ -24,18 +24,21 @@ export default function RootLayout({
               Cloudinary Blog Cover Images
             </h1>
             <div className="flex gap-4 w-full">
-              <Link href="/" className="text-sky-400 max-w-2xl mx-auto">
+              <Link
+                href="/"
+                className="text-orange-200 hover:text-orange-400 dark:text-orange-200 max-w-2xl mx-auto"
+              >
                 next image
               </Link>
               <Link
                 href="/next-cloudinary"
-                className="text-sky-400 max-w-2xl mx-auto"
+                className="text-orange-200 hover:text-orange-400 dark:text-orange-200 max-w-2xl mx-auto"
               >
                 next-cloudinary
               </Link>
               <Link
                 href="/getCldImage"
-                className="text-sky-400 max-w-2xl mx-auto"
+                className="text-orange-200 hover:text-orange-400 dark:text-orange-200 max-w-2xl mx-auto"
               >
                 getCldImage
               </Link>

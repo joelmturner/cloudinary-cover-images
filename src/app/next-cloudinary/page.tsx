@@ -42,7 +42,7 @@ function PostCard({
       <h2 className="mb-1 text-xl">
         <Link
           href={url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
+          className="text-orange-200 hover:text-orange-400 dark:text-orange-200"
         >
           {title}
         </Link>
@@ -166,6 +166,18 @@ export default function PostImage() {
       <h1 className="mb-8 text-center text-2xl font-black">
         Using next-cloudinary
       </h1>
+      <p className="prose bg-gray-700 p-4 mb-4">
+        The post images below are using the <code>CldImg</code> component from{" "}
+        <a
+          href="https://next.cloudinary.dev/"
+          target="_blank"
+          className="no-underline hover:underline text-purple-400"
+        >
+          next-cloudinary
+        </a>
+        . This component is a great combination of the Cloudinary api and
+        Next&apos;s Image component.
+      </p>
       {posts.map((post) => (
         <PostCard key={post.url} {...post} />
       ))}
